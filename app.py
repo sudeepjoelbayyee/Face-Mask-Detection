@@ -7,7 +7,6 @@ from PIL import Image
 import streamlit as st
 
 model = load_model('model.h5')
-
 haar = cv2.CascadeClassifier('haarcascade-frontalface-default.xml')
 def detect_face(img):
     coods = haar.detectMultiScale(img)
